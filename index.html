@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.banner {
+            text-align: center;
+            background-color: #130ea4;
+            padding: 80px;
+        }
+       
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+      
+        .banner-text {
+            animation: flash 1s infinite;
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+   <p id="Example">Old Text</p>
+
+   <button type="button" onclick='toggleText()'>Change Text</button>
+
+    <p id="Number"></p>
+
+   <script>
+      
+       function toggleText() {
+           var exampleElement = document.getElementById("Example");
+           if (exampleElement.innerHTML === "What's the answer for 5+10") {
+            document.getElementById("Number").innerHTML = 5 + 10; 
+           } else {
+               exampleElement.innerHTML = "What's the answer for 5+10"; 
+           }
+       }
+       
+   </script>
+
+   <script>
+    console.log("Welcome " + " David");
+   </script>
+
+<div class="banner">
+    <h1 class="banner-text">Welcome to the class</h1>
+</div>
+</body>
+</html>
